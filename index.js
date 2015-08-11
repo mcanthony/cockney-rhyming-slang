@@ -1,13 +1,34 @@
-var s = require('stopwords').english
-
+var pronouncing = require('pronouncing')
 var phrases = require('./phrases')
 
-var g = phrases.filter(function(phrase){
-  var good = phrase.phrase.split(" ").filter(function(word){
-    return s.indexOf(word.toLowerCase()) === -1
-  })
-  phrase.words = good
-  return good.length === 2
-})
+var the_burden = phrases.reduce(function(truth, p){ // yeah, burden of proof, the_truth!
+  assignIt(truth, p)
+  return truth
+}, {})
 
-console.log(g)
+function assignIt (obj, phr) {
+  if(!obj[phr.words[0]]) obj[phr.words[0]] = []
+  if(!obj[phr.words[1]]) obj[phr.words[1]] = []
+
+  obj[phr.words[1]].push({word: phr.words[0], other: phr.words[1], phrase: phr.phrase})
+  obj[phr.words[0]].push({word: phr.words[1], other: phr.words[0], phrase: phr.phrase})
+}
+
+module.exports = function (word) {
+  var nickels = pronouncing.rhymes(word) // you know, like nickels and dimes, rhymes?
+  if (!nickels.length) {
+    console.log('bonk, no rhymes', word)
+    return false
+  }
+  var donuts = nickels.filter(function(nickel){ // you know, like donut batches, matches? (ok this one is a stretch)
+    return !!the_burden[nickel]
+  })
+  if (!donuts.length) {
+    console.log('bonk, no matches', word)
+    return false
+  }
+
+  var dolphins = the_burden[donuts[~~(Math.random() * donuts.length)]] // you dont wanna know
+
+  return dolphins[~~(Math.random() * dolphins.length)]
+}
