@@ -27,6 +27,7 @@
   "license": "MIT",
   "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
   "dependencies": {
-    "pronouncing": "git://github.com/aparrish/pronouncingjs"
+    "pronouncing": "git://github.com/aparrish/pronouncingjs",
+    "stopwords": "0.0.4"
   }
 }
