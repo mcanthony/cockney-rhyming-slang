@@ -15,4 +15,3 @@ tap.test('if no rhyming words in the thing returns undefined', function (t) {
   t.plan(1)
   t.ok(!cockneyRhymingSlang('appropriate'), 'yup, good enough')
 })
-
