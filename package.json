@@ -7,7 +7,8 @@
     "build": "browserify www/demo.js -o www/bundle.js",
     "deploy": "git push origin master && gh-pages-deploy",
     "test": "standard && node test.js",
-    "watch": "watchify www/demo.js -o www/bundle.js --debug --verbose"
+    "watch": "watchify www/demo.js -o www/bundle.js --debug --verbose",
+    "tweet": "node bot.js"
   },
   "devDependencies": {
     "browserify": "*",
@@ -27,6 +28,7 @@
   "license": "MIT",
   "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
   "dependencies": {
-    "pronouncing": "git://github.com/aparrish/pronouncingjs"
+    "pronouncing": "git://github.com/aparrish/pronouncingjs",
+    "twit": "^2.1.0"
   }
 }

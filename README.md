@@ -1,6 +1,8 @@
 cockney-rhyming-slang
 ----------------
 
+TODO: um i guess it could listen for toots, find one that has a slang, and reply to it? hmmm.
+
 tool to help you come up with [cockney rhyming slang](https://en.wikipedia.org/wiki/Rhyming_slang)
 
 [![NPM](https://nodei.co/npm/cockney-rhyming-slang.png)](https://nodei.co/npm/cockney-rhyming-slang/)
