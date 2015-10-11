@@ -1,6 +1,6 @@
 {
   "name": "cockney-rhyming-slang",
-  "description": "Put A Description Here!",
+  "description": "Given a word, try to make up a cockney rhyming slang about it",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
