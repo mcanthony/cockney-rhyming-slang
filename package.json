@@ -28,7 +28,20 @@
   "license": "MIT",
   "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
   "dependencies": {
-    "pronouncing": "git://github.com/aparrish/pronouncingjs",
+    "pronouncing": "git://github.com/aparrish/pronouncingjs.git",
     "twit": "^2.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coleww/cockney-rhyming-slang.git"
+  },
+  "bugs": {
+    "url": "https://github.com/coleww/cockney-rhyming-slang/issues"
+  },
+  "homepage": "https://github.com/coleww/cockney-rhyming-slang#readme",
+  "keywords": [
+    "language",
+    "slang",
+    "twitter"
+  ]
 }
