@@ -6,7 +6,7 @@
   "scripts": {
     "build": "browserify www/demo.js -o www/bundle.js",
     "deploy": "git push origin master && gh-pages-deploy",
-    "test": "standard && node test.js",
+    "test": "standard",
     "watch": "watchify www/demo.js -o www/bundle.js --debug --verbose",
     "tweet": "node bot.js"
   },
